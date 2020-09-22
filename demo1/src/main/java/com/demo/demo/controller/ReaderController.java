@@ -1,4 +1,4 @@
-package com.demo.demo.controll;
+package com.demo.demo.controller;
 
 
 import com.demo.demo.entity.reader;
@@ -9,15 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-import java.io.Reader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/Test")
-public class readerControll {
+public class ReaderController {
     @Autowired
     private readerService readerSer;
 
