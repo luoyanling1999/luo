@@ -29,5 +29,11 @@ public class ReaderController {
         return list;
     }
 
-
+ @RequestMapping("/select")
+    @ResponseBody
+    public List<reader> alal() {
+        List<reader> list = new ArrayList<reader>();
+        list=readerSer.selectAll();
+        return list;
+    }
 }
