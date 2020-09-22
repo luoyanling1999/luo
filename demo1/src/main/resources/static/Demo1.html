@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实例1</title>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+
+    $("#select").click(function () {
+
+        $.post(
+            "Test/selectAll",{data:"data"},function (map) {
+
+
+                for(var i=0;i<list.length;i++){
+                    $("#try").append(
+                    "        <td id=\"a\">"+list[i].R000+"</td>\n" +
+                    "        <td id=\"b\">"+list[i].R01A+"</td>\n" +
+                    "        <td id=\"c\">"+list[i].R01B+"</td>\n" +
+                    "        <td id=\"d\">"+list[i].R01C+"</td>"
+                );
+                }
+
+              /*  $("#a").html(object.r000);
+                $("#b").html(object.r01a);
+                $("#c").html(object.r01b);
+                $("#d").html(object.r01c);*/
+            }
+        );
+    })
+
+
+
+</script>
+<p>注意前后台一定要有交互，不要在页面上输入个网址去修改数据，
+    不行的话可以弄一个编辑框去修改数据，用按钮提交
+</p>
+
+<button id="select">查询</button>
+<table>
+    <tr>
+        <td>R000</td>
+        <td>R01A</td>
+        <td>R01B</td>
+        <td>R01C</td>
+    </tr>
+    <tbody id="try">
+
+    </tbody>
+    <!--<tr>
+        <td id="a"></td>
+        <td id="b"></td>
+        <td id="c"></td>
+        <td id="d"></td>
+    </tr>-->
+</table>
+</body>
+</html>
