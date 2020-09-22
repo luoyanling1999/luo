@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/Test")
+@RequestMapping("/Tesat")
 public class ReaderController {
     @Autowired
     private readerService readerSer;
